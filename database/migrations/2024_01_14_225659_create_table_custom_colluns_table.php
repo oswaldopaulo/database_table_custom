@@ -17,8 +17,10 @@ return new class extends Migration
             $table->string('column');
             $table->string('type');
             $table->integer('size');
-            $table->integer('default');
-            $table->integer('cssclass');
+            $table->string('default')->default('null');
+            $table->string('cssclass')->default('form-control');
+            $table->string('inputtype')->default('text');
+            $table->integer('csscolsize')->default('12');
             $table->timestamps();
             $table->softDeletes();
         });
